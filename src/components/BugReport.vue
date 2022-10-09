@@ -72,7 +72,6 @@ export default {
 
                 this.totalID ++;
                 this.sBugs.push(bugObj);
-                console.log("Added bug " + bugObj.id + ": " + bugObj.title);
 
                 // reset title and description variables
                 this.bugTitle = "";
@@ -84,7 +83,6 @@ export default {
         deleteBug(id) {
             for (var i=0; i < this.sBugs.length; i++) {
                 if (this.sBugs[i].id == id) {
-                    console.log("Deleted bug " + this.sBugs[i].id + ": " + this.sBugs[i].title);
                     this.sBugs.splice(i, 1);
                 }
             }
@@ -94,7 +92,6 @@ export default {
         resolveBug(id) {
             for (var i=0; i < this.sBugs.length; i++) {
                 if (this.sBugs[i].id == id) {
-                    console.log("Resolved bug " + this.sBugs[i].id + ": " + this.sBugs[i].title);
                     this.rBugs.push(this.sBugs[i]);
                     this.sBugs.splice(i, 1);
                 }
@@ -106,10 +103,10 @@ export default {
     
 <style scoped>
 .container {
+    width: 70vw;
     margin-top: 1.5em;
     margin-left: auto;
     margin-right: auto;
-    width: 70vw;
 }
 
 .form {
@@ -124,23 +121,23 @@ export default {
 }
 
 label, input {
-    margin-bottom: 0.75em;
     display: block;
+    margin-bottom: 0.75em;
 }
 
 input {
-    border-radius: 15px;
-    border: 1px solid gray;
-    padding: 0.75em;
     width: 100%;
+    border: 1px solid gray;
+    border-radius: 15px;
+    padding: 0.75em;
 }
 
 button {
-    border: none;
-    border-radius: 20px;
+    font-weight: bold;
     height: 2.5em;
     width: 8.5em;
-    font-weight: bold;
+    border: none;
+    border-radius: 20px;
     margin-right: 0.75em;
 }
 
@@ -167,10 +164,10 @@ ul {
 }
     
 li {
+    overflow-wrap: break-word;
+    border-radius: 15px;
     margin: 1.25em 0;
     padding: 1em;
-    border-radius: 15px;
-    overflow-wrap: break-word;
 }
 
 .submmitedList {

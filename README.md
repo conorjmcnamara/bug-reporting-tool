@@ -1,7 +1,6 @@
 # Bug Reporting Tool
 
 A basic Vue.js bug reporting web application that uses Puppeteer and Jest for testing.
-Each submitted/resolved bug can be uniquely identified with their respective ID.
 The test script ```site.test.js``` produces a .txt report of the test logs.
 
 ## Installation
